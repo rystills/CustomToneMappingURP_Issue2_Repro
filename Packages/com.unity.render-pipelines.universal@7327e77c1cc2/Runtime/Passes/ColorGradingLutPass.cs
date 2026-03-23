@@ -258,6 +258,7 @@ namespace UnityEngine.Rendering.Universal.Internal
                     {
                         case TonemappingMode.Neutral: material.EnableKeyword(ShaderKeywordStrings.TonemapNeutral); break;
                         case TonemappingMode.ACES: material.EnableKeyword(allowColorGradingACESHDR ? ShaderKeywordStrings.TonemapACES : ShaderKeywordStrings.TonemapNeutral); break;
+                        case TonemappingMode.Custom: CustomToneMapping.URP.UrpBridge.PrepareMaterial(material, passData.cameraData.isHDROutputActive ? passData.cameraData.hdrDisplayInformation : null); break;
                         default: break; // None
                     }
 

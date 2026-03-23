@@ -105,6 +105,8 @@ half3 ApplyTonemap(half3 input)
     input = AcesTonemap(aces);
 #elif _TONEMAP_NEUTRAL
     input = NeutralTonemap(input);
+#elif _TONEMAP_CUSTOM
+#include "Packages/net.aki-null.tonemapping/Runtime/URP/Shaders/TonemapLdr.hlsl"
 #endif
 
     return saturate(input);

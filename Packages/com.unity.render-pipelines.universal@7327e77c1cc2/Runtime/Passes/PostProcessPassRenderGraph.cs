@@ -2579,6 +2579,7 @@ namespace UnityEngine.Rendering.Universal
                         {
                             case TonemappingMode.Neutral: CoreUtils.SetKeyword(material, ShaderKeywordStrings.TonemapNeutral, true); break;
                             case TonemappingMode.ACES: CoreUtils.SetKeyword(material, ShaderKeywordStrings.TonemapACES, true); break;
+                            case TonemappingMode.Custom: CustomToneMapping.URP.UrpBridge.PrepareMaterial(material, data.cameraData.isHDROutputActive ? data.cameraData.hdrDisplayInformation : null); break;
                             default: break; // None
                         }
                     }
