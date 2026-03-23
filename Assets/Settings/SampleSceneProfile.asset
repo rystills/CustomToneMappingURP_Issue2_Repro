@@ -18,10 +18,10 @@ MonoBehaviour:
     m_Value: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.84
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 15.8
   scatter:
     m_OverrideState: 1
     m_Value: 0.5
@@ -34,6 +34,9 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
+  filter:
+    m_OverrideState: 0
+    m_Value: 0
   downscale:
     m_OverrideState: 0
     m_Value: 0
@@ -92,6 +95,31 @@ MonoBehaviour:
   - {fileID: -7893295128165547882}
   - {fileID: 7391319092446245454}
   - {fileID: -3357603926938260329}
+  - {fileID: 237960760405897615}
+  - {fileID: 5565623888445909417}
+--- !u!114 &237960760405897615
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423030d36666645b79933c364aa05744, type: 3}
+  m_Name: CustomToneMapping
+  m_EditorClassIdentifier: net.aki-null.ToneMapping.URP::CustomToneMapping.URP.CustomToneMapping
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
+  lutSize:
+    m_OverrideState: 0
+    m_Value: 32
+  lutTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+    dimension: 1
 --- !u!114 &849379129802519247
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -107,7 +135,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 3
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
@@ -132,6 +160,58 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 1
     m_Value: 647
+--- !u!114 &5565623888445909417
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970bbcb3f38604f8ab0124110c82d4a5, type: 3}
+  m_Name: GT7ToneMapping
+  m_EditorClassIdentifier: net.aki-null.ToneMapping.URP::CustomToneMapping.URP.GT7ToneMapping
+  active: 1
+  detectPeakNits:
+    m_OverrideState: 0
+    m_Value: 1
+  targetPeakNits:
+    m_OverrideState: 0
+    m_Value: 1000
+  sdrPaperWhite:
+    m_OverrideState: 0
+    m_Value: 100
+  referenceLuminance:
+    m_OverrideState: 0
+    m_Value: 100
+  curveAlpha:
+    m_OverrideState: 0
+    m_Value: 0.01
+  curveMidPoint:
+    m_OverrideState: 0
+    m_Value: 0.22
+  curveLinearSection:
+    m_OverrideState: 0
+    m_Value: 0.527623
+  curveToeStrength:
+    m_OverrideState: 0
+    m_Value: 1.33
+  ucs:
+    m_OverrideState: 0
+    m_Value: 0
+  jzazbzExponentScale:
+    m_OverrideState: 0
+    m_Value: 1.7
+  blendRatio:
+    m_OverrideState: 0
+    m_Value: 0.6
+  fadeStart:
+    m_OverrideState: 0
+    m_Value: 0.98
+  fadeEnd:
+    m_OverrideState: 0
+    m_Value: 1.16
 --- !u!114 &7391319092446245454
 MonoBehaviour:
   m_ObjectHideFlags: 3
